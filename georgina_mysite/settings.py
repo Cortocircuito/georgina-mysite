@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_instagram',
     'myprofile',
     'blog',
 ]
@@ -130,4 +131,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # keep it empty for the moment
 STATICFILES_DIRS = (
 )
-
