@@ -25,7 +25,7 @@ urlpatterns = [
     
     url(r'', include('myprofile.urls')),
     url(r'^galeria', include('myprofile.urls')),
-    url(r'^blog', include('myprofile.urls')),
+    url(r'^insta', include('myprofile.urls')),
     
     url(r'^blog', include('blog.urls')),
 ]
