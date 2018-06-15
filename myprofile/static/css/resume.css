@@ -145,15 +145,3 @@ a {
 a:hover, a:focus, a:active {
   color: #0a5659;
 }
-
-.media_wall_item a {
-  width: 55%;
-}
-
-.media_wall_item img {
-  width: 55%;
-}
-
-.media_wall_item p {
-  width: 55%;
-}
