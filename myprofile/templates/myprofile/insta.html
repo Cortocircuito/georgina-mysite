@@ -6,10 +6,34 @@
 {% block content %}
 <section class="resume-section p-3 p-lg-5 d-flex d-column" id="sobre">
   <div class="my-auto">
-    <h2 class="mb-1">Para comerte <span class="text-primary">mejor</span></h2>
 
-    {% instagram_recent_media_wall username="para_comerte_mejor" %}
+    <h1 class="mb-1">
+      Para comerte <span class="text-primary">mejor</span>
+    </h1>
+
+    <div id="django_recent_media_wall">
+      {% instagram_user_recent_media para_comerte_mejor %}
+      {% for media in recent_media %}
+
+      <div class="card" style="width: 40%;">
+        <a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
+          <img class="card-img-top rounded" src="{{ media.thumbnail_src }}" alt="{{ forloop.counter }}" />
+        </a>
+        <div class="card-body">
+          <p class="card-text">
+            {% with descripcion=media.edge_media_to_caption.edges.0.node.text %}
+            <span>{{ descripcion.strip|slice:":100" }}</span>
+            {% endwith %}
+          </p>
+          <a href="//instagram.com/p/{{ media.shortcode }}" class="btn btn-info">Más detalles</a>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+
     <p>Got from instagram</p>
+
   </div>
 </section>
 {% endblock %}
