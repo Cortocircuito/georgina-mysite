@@ -5,29 +5,31 @@
 
 {% block content %}
 <div class="my-auto">
-<h1 class="mb-1">Para comerte <span class="text-primary">mejor</span></h1>
-<div class="row">
+  <h1 class="mb-2">Para comerte <span class="text-primary">mejor</span></h1>
+  <div class="row">
 
-  {% instagram_user_recent_media para_comerte_mejor %}
-  {% for media in recent_media %}
-  <div class="col-sm-6 col-xs-12">
-    <div class="card" style="width: 80%;">
-      <a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
-        <img class="card-img-top rounded" src="{{ media.thumbnail_src }}" alt="{{ forloop.counter }}" />
-      </a>
-      <div class="card-body text-center">
-        <h5 class="card-title">{{ forloop.counter }}</h5>
-        <p class="card-text text-left">
-          {% with descripcion=media.edge_media_to_caption.edges.0.node.text %}
-          <span>{{ descripcion.strip|slice:":100" }}</span>
-          {% endwith %}
-        </p>
-        <a href="//instagram.com/p/{{ media.shortcode }}" class="btn btn-info">Más detalles</a>
+    {% instagram_user_recent_media para_comerte_mejor %}
+    {% for media in recent_media %}
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <div class="card" style="width: 100%;">
+        <a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
+          <img class="card-img-top rounded" src="{{ media.thumbnail_src }}" alt="Imagen {{ forloop.counter }}" />
+        </a>
+        <div class="card-body text-center">
+          <h5 class="card-title">Imagen {{ forloop.counter }}</h5>
+          <p class="card-text text-left">
+            {% with descripcion=media.edge_media_to_caption.edges.0.node.text %}
+            {% if descripcion %}
+            <span>{{ descripcion.strip|safe|slice:":100" }} ...</span>
+            {% endif %}
+            {% endwith %}
+          </p>
+          <a href="//instagram.com/p/{{ media.shortcode }}" class="btn btn-info">Más detalles</a>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
-<p>Got from instagram</p>
+  <p>Got from instagram</p>
 </div>
 {% endblock %}
