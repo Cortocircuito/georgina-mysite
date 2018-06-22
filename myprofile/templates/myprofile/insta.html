@@ -4,6 +4,7 @@
 {% block title %}Georgina Dávila - Para Comerte Mejor{% endblock %}
 
 {% block content %}
+<section class="resume-section p-3 p-lg-5 d-flex d-column">
 <div class="my-auto">
   <h1 class="mb-2">Para comerte <span class="text-primary">mejor</span></h1>
   <div class="row">
@@ -13,10 +14,10 @@
     <div class="col-xs-12 col-sm-6 col-lg-4">
       <div class="card" style="width: 100%;">
         <a href="//instagram.com/p/{{ media.shortcode }}" target="_blank">
-          <img class="card-img-top rounded" src="{{ media.thumbnail_src }}" alt="Imagen {{ forloop.counter }}" />
+          <img class="card-img-top rounded" src="{{ media.thumbnail_src }}" alt="Plato sencillo {{ forloop.counter }}" />
         </a>
         <div class="card-body text-center">
-          <h5 class="card-title">Imagen {{ forloop.counter }}</h5>
+          <h5 class="card-title">Plato sencillo {{ forloop.counter }}</h5>
           <p class="card-text text-left">
             {% with descripcion=media.edge_media_to_caption.edges.0.node.text %}
             {% if descripcion %}
@@ -32,4 +33,5 @@
   </div>
   <p>Got from instagram</p>
 </div>
+  </section>
 {% endblock %}
