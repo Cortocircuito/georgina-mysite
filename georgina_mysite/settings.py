@@ -133,7 +133,7 @@ STATICFILES_DIRS = (
 )
 
 # configuration to send email throught smpt of Sendgrid
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'isdsate'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
