@@ -9,7 +9,14 @@ def index(request):
 
 @never_cache
 def contacto(request):
-    send_mail('Subject here', 'Here is the message.', 'from@example.com', ['isdsate@gmail.com'], fail_silently=False)
+    # Aqui toca recoger Nombre Email y Mensaje
+    nombre = request.POST['nombre']
+    email = request.POST['email']
+    mensaje = request.POST['mensaje']
+
+    subject = "Consulta de " + nombre
+
+    send_mail(subject, mensaje, email, ['mejorcomertepara@gmail.com'], fail_silently=False)
     return render(request, 'myprofile/index.html', {})
 
 @never_cache
