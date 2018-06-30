@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.decorators.cache import never_cache
-from django.core.mail import send_mail
+import sendgrid
+import os
+from sendgrid.helpers.mail import *
 
 # Create your views here.
 @never_cache
@@ -14,9 +16,17 @@ def contacto(request):
     email = request.POST['email']
     mensaje = request.POST['mensaje']
 
-    subject = "Consulta de " + nombre
+    sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+    from_email = Email(email)
+    to_email = Email("mejorcomertepara@gmail.com")
+    subject = "Consulta del paciente " + nombre
+    content = Content("text/plain", mensaje)
+    mail = Mail(from_email, subject, to_email, content)
+    response = sg.client.mail.send.post(request_body=mail.get())
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
 
-    send_mail(subject, mensaje, email, ['mejorcomertepara@gmail.com'], fail_silently=False)
     return render(request, 'myprofile/index.html', {})
 
 @never_cache

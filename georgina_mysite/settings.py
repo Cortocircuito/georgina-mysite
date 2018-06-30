@@ -132,9 +132,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
 )
 
-# configuration to send email throught smpt of Sendgrid
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'isdsate@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# configuration to sendgrid send throught http with their API
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
