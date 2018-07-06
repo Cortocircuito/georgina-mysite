@@ -1,9 +1,8 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
+
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
@@ -15,6 +14,10 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
+    class Meta:
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
+        ordering = ('title', )
+
     def __str__(self):
         return self.title
-    
