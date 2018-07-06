@@ -1,247 +1,279 @@
 {% extends 'myprofile/base.html' %}
 
+{% load staticfiles %}
+
 {% block title %}Georgina Dávila - Nutricionista{% endblock %}
 
 {% block content %}
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="sobre">
-        <div class="my-auto">
-          <h1 class="mb-0">Georgina <span class="text-primary">Dávila</span></h1>
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="sobre">
+  <div class="my-auto">
+    <h1 class="mb-0">Georgina <span class="text-primary">Dávila</span></h1>
+    <div class="subheading mb-1">
+      Palma de Mallorca, Islas Baleares ·
+      <a href="mailto:mejorcomertepara@gmail.com">mejorcomertepara@gmail.com</a>
+    </div>
 
-          <div class="subheading mb-5">
-            Palma de Mallorca, Islas Baleares ·
-            <a href="mailto:mejorcomertepara@gmail.com">mejorcomertepara@gmail.com</a>
-          </div>
-          <p class="mb-5">
-            Soy una experimentada nutricionista especializada en Cineantropometría y
-            Nutrición Deportiva. Además poseo un curso de Especialización en Obesidad,
-            así que tengo las aptitudes necesarias para ayudar a pacientes con esta patología.
-            Me apasiona mi trabajo y es por ello que además administro un proyecto online llamado
-            "Para comerte mejor", donde trato de dar ideas para platos sencillos y saludables.
-          </p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://es.linkedin.com/in/georgina-d%C3%A1vila-buriello-59b85064">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/para_comerte_mejor/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <img src="{% static 'img/IB000116_GEORGINA DÁVILA BURRIELLO_I.jpg' %}"
+         class="rounded d-block mb-5"
+         alt="Número de colegiada IB000116"/>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experiencia">
-        <div class="my-auto">
-          <h2 class="mb-5">Experiencia</h2>
+    <p class="mb-2">
+      Comencé mi andadura profesional en la educación nutricional, charlas, talleres y
+      showcookings; hasta dar posteriormente con la consulta dietética clínica.
+    </p>
+    <p class="mb-2">
+      Como apasionada del deporte, cursé el Máster en Cineantropometría y
+      Nutrición Deportiva, respondiendo a las demandas de una disciplina en auge.
+    </p>
+    <p class="mb-2">
+      Asimismo, sin estar ajena al día a día en consulta, y dado el perfil de pacientes
+      mayoritario, decidí especializarme en Obesidad.
+    </p>
+    <p class="mb-2">
+      Si bien mi lengua materna es el castellano, hablo también inglés, francés y catalán;
+      idiomas en los que ofrezco mis conocimientos y servicios.
+    </p>
+    <p class="mb-2">
+      Recientemente, he conjugado mi afición a la cocina, mi condición de flexitariana y
+      mi profesión, dando vida a un proyecto online llamado "Para comerte mejor".
+    </p>
+    <p class="mb-2">
+      En resumen, tienes a tu disposición, una dietista-nutricionista colegiada, miembro del
+      Grupo de Especialización de Nutrición y Dietética para la Actividad Física y
+      Deportiva de la Academia Española de Nutrición y Dietética.
+    </p>
+    <p class="mb-5">
+      Así que, si eres deportista amateur o profesional o bien, tienes sobrepeso u
+      obesidad, y comulgas con el vegetarianismo, aquí tienes a tu nutricionista de cabecera.
+      ¡Contáctame!
+    </p>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Nutrición deportiva</h3>
-              <div class="subheading mb-3">FrauSalud CB (triatlon y ciclismo)</div>
-              <div class="subheading mb-3">Centro ADN (crossfit, boxeo, fitness)</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2016 - Actualidad</span>
-            </div>
-          </div>
+    <img src="{% static 'img/genudafd.png' %}"
+         class="rounded d-block float-right"
+         alt="Academia Española de Nutrición y Dietética">
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Nutrición clínica</h3>
-              <div class="subheading mb-3">NouSalud Centro Médico</div>
-              <div class="subheading mb-3">Clínica Saludarium</div>
-              <div class="subheading mb-3">FrauSalud CB</div>
-              <div class="subheading mb-3">Osteopalma</div>
-              <div class="subheading mb-3">Centro ADN</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2012 - Actualidad</span>
-            </div>
-          </div>
+    <ul class="list-inline list-social-icons mb-0">
+      <li class="list-inline-item">
+        <a href="https://es.linkedin.com/in/georgina-d%C3%A1vila-buriello-59b85064">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="https://www.instagram.com/para_comerte_mejor/">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Educación Nutricional</h3>
-              <div class="subheading mb-3">Consum Cooperativa: adherencia a la dieta
-mediterránea.</div>
-              <div class="subheading mb-3">Proyecto Suma’t: promoción de hábitos saludables en
-niños y adolescentes.</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2011 - Actualidad</span>
-            </div>
-          </div>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experiencia">
+  <div class="my-auto">
+    <h2 class="mb-5">Experiencia</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Restauración Colectiva</h3>
-              <div class="subheading mb-3">Sodhexo Hospital Clínico de Valencia</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Enero - Mayo 2011</span>
-            </div>
-          </div>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Nutrición deportiva</h3>
+        <div class="subheading mb-3">FrauSalud CB (triatlon y ciclismo)</div>
+        <div class="subheading mb-3">Centro ADN (crossfit, boxeo, fitness)</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">2016 - Actualidad</span>
+      </div>
+    </div>
 
-        </div>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Nutrición clínica</h3>
+        <div class="subheading mb-3">NouSalud Centro Médico</div>
+        <div class="subheading mb-3">Clínica Saludarium</div>
+        <div class="subheading mb-3">FrauSalud CB</div>
+        <div class="subheading mb-3">Osteopalma</div>
+        <div class="subheading mb-3">Centro ADN</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">2012 - Actualidad</span>
+      </div>
+    </div>
 
-      </section>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Educación Nutricional</h3>
+        <div class="subheading mb-3">Consum Cooperativa: adherencia a la dieta
+          mediterránea.</div>
+        <div class="subheading mb-3">Proyecto Suma’t: promoción de hábitos saludables en
+          niños y adolescentes.</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">2011 - Actualidad</span>
+      </div>
+    </div>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Formación</h2>
+    <div class="resume-item d-flex flex-column flex-md-row">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Restauración Colectiva</h3>
+        <div class="subheading mb-3">Sodhexo Hospital Clínico de Valencia</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Enero - Mayo 2011</span>
+      </div>
+    </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Instituto de Ciencias de la
-Nutrición y Salud (ICNS)</h3>
-              <div class="subheading mb-3">Especialización en Obesidad</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Enero - Junio 2016</span>
-            </div>
-          </div>
+  </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Universidad de Valencia</h3>
-              <div class="subheading mb-3">Master en Cineantropometría y Nutrición Deportiva</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Septiembre 2012 - Junio 2013</span>
-            </div>
-          </div>
+</section>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Universidad de Valencia</h3>
-              <div class="subheading mb-3">Grado en Nutrición Humana y Dietética</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Septiembre 2007 - Junio 2011</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+  <div class="my-auto">
+    <h2 class="mb-5">Formación</h2>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publicaciones">
-        <div class="my-auto">
-          <h2 class="mb-5">Publicaciones</h2>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Instituto de Ciencias de la
+          Nutrición y Salud (ICNS)</h3>
+        <div class="subheading mb-3">Especialización en Obesidad</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Enero - Junio 2016</span>
+      </div>
+    </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Consell de Mallorca</h3>
-              <div class="subheading mb-3">Recomendaciones nutricionales en el ámbito deportivo</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Enero - Mayo 2018</span>
-            </div>
-          </div>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Universidad de Valencia</h3>
+        <div class="subheading mb-3">Master en Cineantropometría y Nutrición Deportiva</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Septiembre 2012 - Junio 2013</span>
+      </div>
+    </div>
 
-        </div>
-      </section>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Universidad de Valencia</h3>
+        <div class="subheading mb-3">Grado en Nutrición Humana y Dietética</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Septiembre 2007 - Junio 2011</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="colaboraciones">
-        <div class="my-auto">
-          <h2 class="mb-5">Colaboraciones</h2>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publicaciones">
+  <div class="my-auto">
+    <h2 class="mb-5">Publicaciones</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Greenpeace Mallorca</h3>
-              <div class="subheading mb-3">Showcooking junto a Miquel Calent</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Diciembre - 2017</span>
-            </div>
-          </div>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Consell de Mallorca</h3>
+        <div class="subheading mb-3">Recomendaciones nutricionales en el ámbito deportivo</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Enero - Mayo 2018</span>
+      </div>
+    </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">IB3 Radio</h3>
-              <div class="subheading mb-3">Programa No Apaguis El LLum</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Mayo - 2018</span>
-            </div>
-          </div>
+  </div>
+</section>
 
-        </div>
-      </section>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="colaboraciones">
+  <div class="my-auto">
+    <h2 class="mb-5">Colaboraciones</h2>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="donde">
-        <div class="my-auto">
-          <h2 class="mb-5">Dónde encontrarme</h2>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">Greenpeace Mallorca</h3>
+        <div class="subheading mb-3">Showcooking junto a Miquel Calent</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Diciembre - 2017</span>
+      </div>
+    </div>
 
-          <p class="mb-5">
-            Elije la opcion que más se adapte a ti.
-          </p>
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">IB3 Radio</h3>
+        <div class="subheading mb-3">Programa No Apaguis El LLum</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Mayo - 2018</span>
+      </div>
+    </div>
 
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-home"></i>
-              <a href="http://centroadn.com/">Centro ADN</a>
-            </li>
-          </ul>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-skype"></i>
-              <a href="#">Skype</a>
-            </li>
-          </ul>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-car"></i>
-              A domicilio
-            </li>
-          </ul>
+  </div>
+</section>
 
-          </ul>
-        </div>
-      </section>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="donde">
+  <div class="my-auto">
+    <h2 class="mb-5">Dónde encontrarme</h2>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contacto">
-        <div class="my-auto">
-          <h2 class="mb-5">Contacto</h2>
+    <p class="mb-5">
+      Elije la opcion que más se adapte a ti.
+    </p>
 
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="card border-info">
-                <div class="card-body text-info">
-                  <h5 class="card-title">Infórmate</h5>
-                  <p class="card-text">
-                    Resuelve dudas, amplía información y conoce tarifas rellenando este formulario.
-                  </p>
+    <ul class="fa-ul mb-0">
+      <li>
+        <i class="fa-li fa fa-home"></i>
+        <a href="http://centroadn.com/">Centro ADN</a>
+      </li>
+    </ul>
+    <ul class="fa-ul mb-0">
+      <li>
+        <i class="fa-li fa fa-skype"></i>
+        <a href="#">Skype</a>
+      </li>
+    </ul>
+    <ul class="fa-ul mb-0">
+      <li>
+        <i class="fa-li fa fa-car"></i>
+        A domicilio
+      </li>
+    </ul>
+  </div>
+</section>
 
-                  <form action="contacto" method="post">{% csrf_token %}
-                    <div class="form-group">
-                      <label for="nombre">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Correo electronico</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
-                    </div>
-                    <div class="form-group">
-                      <label for="mensaje">Mensaje</label>
-                      <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-info" aria-label="Left Align"
-                            data-toggle="tooltip" data-placement="top" data-original-title="Enviar">
-                      <span class="fa fa-envelope fa-lg" aria-hidden="true"></span> Enviar
-                    </button>
-                  </form>
-                </div>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contacto">
+  <div class="my-auto">
+    <h2 class="mb-5">Contacto</h2>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card border-info">
+          <div class="card-body text-info">
+            <h5 class="card-title">Infórmate</h5>
+            <p class="card-text">
+              Resuelve dudas, amplía información y conoce tarifas rellenando este formulario.
+            </p>
+
+            <form action="contacto" method="post">{% csrf_token %}
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
               </div>
+              <div class="form-group">
+                <label for="email">Correo electronico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-info" aria-label="Left Align"
+                      data-toggle="tooltip" data-placement="top" data-original-title="Enviar">
+                <span class="fa fa-envelope fa-lg" aria-hidden="true"></span> Enviar
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 {% endblock %}
