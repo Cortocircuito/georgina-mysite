@@ -251,19 +251,25 @@
             <p class="card-text">
               Resuelve dudas, amplía información y conoce tarifas rellenando este formulario.
             </p>
-
-            <form action="contacto" method="post">{% csrf_token %}
+            {% if errors %}
+            <ul>
+              {% for error in errors %}
+              <li style="color:red;">{{ error }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="" method="post">{% csrf_token %}
               <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ nombre }}" placeholder="Nombre">
               </div>
               <div class="form-group">
                 <label for="email">Correo electronico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+                <input type="email" class="form-control" id="email" name="email" value="{{ email }}" placeholder="nombre@ejemplo.com">
               </div>
               <div class="form-group">
                 <label for="mensaje">Mensaje</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3">{{mensaje}}</textarea>
               </div>
               <button type="submit" class="btn btn-info" aria-label="Left Align"
                       data-toggle="tooltip" data-placement="top" data-original-title="Enviar">

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.views.decorators.cache import never_cache
 import sendgrid
@@ -8,30 +9,40 @@ from sendgrid.helpers.mail import Email, Content, Mail
 # Create your views here.
 @never_cache
 def index(request):
-    return render(request, 'myprofile/index.html', {})
+    errors = []
 
+    nombre = request.POST.get('nombre', '')
+    email = request.POST.get('email', '')
+    mensaje = request.POST.get('mensaje', '')
 
-def contacto(request):
-    # Aqui toca recoger Nombre Email y Mensaje
-    nombre = request.POST['nombre']
-    email = request.POST['email']
-    mensaje = request.POST['mensaje']
+    if request.method == 'POST':
+        if not nombre:
+            errors.append('Por favor introduce un nombre')
+        if not email:
+            errors.append('Por favor introduce un correo electrónico')
+        if not mensaje:
+            errors.append('Por favor introduce un mensaje')
 
-    sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+        if not errors:
+            sg = sendgrid \
+                 .SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
 
-    from_email = Email(email)
-    to_email = Email("mejorcomertepara@gmail.com")
-    subject = "Consulta del paciente " + nombre
-    content = Content("text/plain", mensaje)
+            from_email = Email(email)
+            to_email = Email("mejorcomertepara@gmail.com")
+            subject = "Consulta del paciente " + nombre
+            content = Content("text/plain", mensaje)
 
-    mail = Mail(from_email, subject, to_email, content)
-    response = sg.client.mail.send.post(request_body=mail.get())
+            mail = Mail(from_email, subject, to_email, content)
+            response = sg.client.mail.send.post(request_body=mail.get())
 
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
 
-    return render(request, 'myprofile/index.html', {})
+    return render(request, 'myprofile/index.html', {'errors': errors,
+                                                    'nombre': nombre,
+                                                    'email': email,
+                                                    'mensaje': mensaje})
 
 
 def galeria(request):
