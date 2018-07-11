@@ -22,10 +22,10 @@ urlpatterns = [
     # url(r'^$', 'myprofile.view.home', name='home'),
 
     url(r'^admin/', admin.site.urls),
-    
+
     url(r'', include('myprofile.urls')),
     url(r'^galeria', include('myprofile.urls')),
     url(r'^insta', include('myprofile.urls')),
-    
+
     url(r'^blog', include('blog.urls')),
 ]
